@@ -1,0 +1,12 @@
+version: "3.9"
+services:
+  web:
+    build: .
+    ports:
+      - "80:8080"
+      - "53:8053"
+    env:
+      HOSTNAME: "dns.hc.lc"
+      BIN_TTL: 3600
+  redis:
+    image: "redis:alpine"
