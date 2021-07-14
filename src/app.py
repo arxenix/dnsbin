@@ -7,5 +7,5 @@ if __name__ == '__main__':
     dnsserver = DNSServer(resolver, port=8053, address="127.0.0.1", logger=logger, tcp=True)
     dnsserver.start_thread()
     print("dns up")
-    httpserver.run(debug=True, use_reloader=False, host='127.0.0.1', port=8080)
+    httpserver.run(debug=False, use_reloader=False, host='127.0.0.1', port=8080)
     print("http up")
